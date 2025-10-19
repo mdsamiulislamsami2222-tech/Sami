@@ -1,0 +1,149 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background: #d6b1b1;
+}
+
+/* Navbar */
+header {
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 1200px;
+  margin: auto;
+  color: rgb(238, 145, 145);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 6px 10px;
+}
+
+.nav-links li a:hover {
+  background: #444;
+  border-radius: 4px;
+}
+
+/* Hamburger Menu (for mobile) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 20px;
+  background: rgb(12, 211, 78);
+  color: rgb(167, 118, 118);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.about, .contact {
+  padding: 60px 20px;
+  text-align: center;
+  
+}
+
+/* Services */
+.services {
+  padding: 60px 20px;
+  background:rgb(0, 255, 34);
+  text-align: center;
+}
+
+.service-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+.table {
+    display: table;
+}
+.text-transparent { color: transparent; }
+.text-black { color: #000; }
+.service {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  width: 200px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
